@@ -1,6 +1,7 @@
 {
   "short_name": "DeveloperFolio",
   "name": "DeveloperFolio",
+  "lang": "en",
   "icons": [
     {
       "src": "/favicon.ico",

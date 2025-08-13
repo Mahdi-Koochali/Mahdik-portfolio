@@ -7,6 +7,9 @@ import {
   greeting,
   workExperiences,
   skillsSection,
+  educationInfo,
+  publicationsSection,
+  bigProjects,
   openSource,
   blogSection,
   talkSection,
@@ -16,9 +19,11 @@ import {
 
 function Header() {
   const {isDark} = useContext(StyleContext);
-  const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
+  const viewEducation = educationInfo.display;
+  const viewExperience = workExperiences.display;
+  const viewPublications = publicationsSection.display;
+  const viewProjects = bigProjects.display;
   const viewAchievement = achievementSection.display;
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
@@ -40,35 +45,30 @@ function Header() {
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
+                <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
               <a href="#skills">Skills</a>
             </li>
           )}
+          {viewEducation && (
+            <li>
+              <a href="#education">Education</a>
+            </li>
+          )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience">Work Experience</a>
             </li>
           )}
-          {viewOpenSource && (
+          {viewPublications && (
             <li>
-              <a href="#opensource">Open Source</a>
+              <a href="#publications">Publications</a>
             </li>
           )}
-          {viewAchievement && (
+          {viewProjects && (
             <li>
-              <a href="#achievements">Achievements</a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
+              <a href="#projects">Projects</a>
             </li>
           )}
           {viewResume && (

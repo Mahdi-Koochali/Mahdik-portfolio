@@ -1,0 +1,104 @@
+@import "../../_globalColor";
+
+.publications-heading {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.publications-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px 0px;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+
+.publications-section > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.publications-card-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 2rem;
+}
+
+.no-publications {
+  text-align: center;
+  padding: 3rem;
+  color: $subTitle;
+  font-size: 1.1rem;
+}
+
+.show-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.show-more-btn {
+  background-color: transparent;
+  border: 2px solid $skillsColor;
+  color: $skillsColor;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+
+  &:hover {
+    background-color: $skillsColor;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($skillsColor, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1380px) {
+  .publications-card-container {
+    padding-top: 0px;
+  }
+  .publications-heading {
+    font-size: 40px;
+  }
+  .show-more-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .publications-card-container {
+    padding-top: 0px;
+  }
+  .publications-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .show-more-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+/* Dark mode styles */
+.dark-mode {
+  .show-more-btn {
+    border-color: $skillsColor;
+    color: $skillsColor;
+
+    &:hover {
+      background-color: $skillsColor;
+      color: white;
+    }
+  }
+}

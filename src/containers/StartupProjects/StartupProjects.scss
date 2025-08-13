@@ -16,6 +16,8 @@
   color: $cardSubtitle;
   font-size: 17px;
   line-height: 1.5rem;
+  text-align: justify;
+  text-align-last: center;
 }
 .project-card {
   display: flex;
@@ -41,7 +43,8 @@
 }
 
 .project-detail {
-  text-align: center;
+  text-align: justify;
+  text-align-last: center;
 }
 .project-card-light:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;

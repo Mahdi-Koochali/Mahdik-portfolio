@@ -1,0 +1,193 @@
+@import "../../_globalColor";
+
+.publication-card {
+  position: relative;
+  background-color: $lightBackground2;
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  border-radius: 10px;
+  border: 1px solid $lightBorder1;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-2px);
+}
+
+.publication-card.featured {
+  border: 2px solid $skillsColor;
+  background: linear-gradient(135deg, $lightBackground2 0%, rgba($skillsColor, 0.05) 100%);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: $skillsColor;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.publication-header {
+  margin-bottom: 1rem;
+}
+
+.publication-title {
+  color: $titleColor;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.publication-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.publication-authors {
+  color: $subTitle;
+  font-weight: 500;
+}
+
+.publication-venue {
+  color: $skillsColor;
+  font-style: italic;
+}
+
+.publication-year {
+  color: $textColor;
+  font-weight: 600;
+}
+
+.publication-description {
+  margin: 1rem 0;
+  
+  p {
+    color: $textColor;
+    line-height: 1.6;
+    text-align: justify;
+  }
+}
+
+.publication-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  background-color: rgba($skillsColor, 0.1);
+  color: $skillsColor;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba($skillsColor, 0.2);
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.publication-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: $skillsColor;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($skillsColor, 10%);
+    transform: translateY(-1px);
+    color: white;
+  }
+
+  i {
+    font-size: 0.9rem;
+  }
+}
+
+.publication-stats {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $lightBorder1;
+}
+
+.citations {
+  color: $subTitle;
+  font-size: 0.9rem;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Dark mode styles */
+.dark-mode {
+  .publication-card {
+    background-color: $darkBackground;
+    border-color: $lightBorder1;
+  }
+
+  .publication-title {
+    color: $textColorDark;
+  }
+
+  .publication-authors {
+    color: $subTitle;
+  }
+
+  .publication-description p {
+    color: $textColorDark;
+  }
+
+  .citations {
+    color: $subTitle;
+  }
+
+  .publication-stats {
+    border-top-color: $lightBorder1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .publication-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .publication-title {
+    font-size: 1.2rem;
+  }
+
+  .publication-meta {
+    font-size: 0.8rem;
+  }
+
+  .publication-links {
+    flex-direction: column;
+  }
+
+  .publication-link {
+    justify-content: center;
+  }
+}

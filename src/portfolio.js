@@ -3,7 +3,7 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation.json";
 
 // Splash Screen
 
@@ -16,14 +16,14 @@ const splashScreen = {
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true // Set to false to use static SVG and avoid animation errors
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Mahdi Koochali",
+  title: "Hey, I'm Mahdi",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "An AI enthusiast 🤖 with hands-on experience as a Data Scientist and Machine Learning Engineer, especially in the field of Computer Vision. I love turning data into intelligent solutions and building real-world applications. Known for my problem-solving mindset, clear communication, and strong teamwork skills 💡🤝"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -33,31 +33,30 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/Mahdi-Koochali",
+  linkedin: "https://www.linkedin.com/in/mohammadmahdi-koochali-06134813a/",
+  gmail: "mahdi.koochali@gmail.com",
+  googleScholar: "https://scholar.google.com/citations?user=hCoq_YcAAAAJ&hl=en",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
 };
 
+
+
 // Skills Section
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "AN AI ENGINEER SPECIALIZING IN DEEP LEARNING AND COMPUTER VISION FOR BIOMEDICAL APPLICATIONS",
   skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ Develop and deploy deep learning models for " +
+          "complex computer vision tasks like image " +
+          "segmentation and object tracking"),
+    emoji("⚡ Leverage generative AI to create synthetic datasets and " +
+          "build robust, multimodal analysis pipelines"),
+    emoji("⚡ Translate cutting-edge AI research into scalable, " +
+          "real-world applications and impactful systems")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -65,36 +64,16 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "python",
+      fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "docker",
+      fontAwesomeClassname: "fab fa-docker"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "git",
+      fontAwesomeClassname: "fab fa-git-alt"
     },
     {
       skillName: "sql-database",
@@ -105,45 +84,56 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-aws"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: "sass",
+      fontAwesomeClassname: "fab fa-sass"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      skillName: "reactjs",
+      fontAwesomeClassname: "fab fa-react"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "PyTorch",
+      imageSrc: require("./assets/images/pytorch-grey.png")
+    },
+    {
+      skillName: "TensorFlow", 
+      imageSrc: require("./assets/images/tensorflow-grey.png")
+    },
+    {
+      skillName: "C++",
+      imageSrc: require("./assets/images/cplusplus-grey.png")
     }
   ],
   display: true // Set false to hide this section, defaults to true
 };
+
 
 // Education Section
 
 const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
-    {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
-    }
+  {
+    schoolName: "Saarland University",
+    logo: require("./assets/images/UdS_logo.jpg"),
+    subHeader: "Master of Science in Bioinformatics",
+    duration: "November 2021 - March 2025",
+    desc: "Authored Master's Thesis titled 'SAT: Segment and Track Anything for Microscopy', earning a perfect grade of 1.0/1.0.",
+    descBullets: [
+      "Developed a novel framework that automates cell segmentation and tracking from minimal user input (a single point or box), significantly reducing manual annotation effort in microscopy.",
+      "Served for two years as an elected member of the Computer Science Students' Representative Council (Fachschaftsrat Informatik)."
+    ]
+  },
+  {
+    schoolName: "Kharazmi University",
+    logo: require("./assets/images/kharazmi_logo.png"),
+    subHeader: "Bachelor of Science in Computer Science",
+    duration: "September 2015 - April 2020",
+    desc: "Achieved a perfect score (1.0/1.0) for my Bachelor's thesis, titled 'Representing UbiqLog Dataset in three different mediums (Music Generation, Narrative, Animation with Deep Reinforcement Learning)'.",
+    descBullets: [
+      "Thesis: Developed a system to translate daily life-log data into three creative outputs: auto-generated music, written narratives, and animations using Deep Reinforcement Learning."
+    ]
+  }
   ]
 };
 
@@ -153,16 +143,24 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Deep Learning for Image Segmentation", // Core research at DFKI and Master's Thesis [cite: 9, 19, 32]
+      progressPercentage: "90%" 
     },
     {
-      Stack: "Backend",
-      progressPercentage: "70%"
+      Stack: "Object Detection & Tracking", // Experience at Sensifai and listed skills [cite: 15, 21, 38]
+      progressPercentage: "85%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "Generative AI (LLMs & VLMs)", // A key modern skill listed in your CV [cite: 21, 27, 38, 39]
+      progressPercentage: "75%"
+    },
+    {
+      Stack: "Python for Data Science (PyTorch, Pandas)", // Your foundational programming toolkit [cite: 37]
+      progressPercentage: "80%" 
+    },
+    {
+      Stack: "MLOps & Developer Tools (Docker, Git, AWS)", // Your skills in deployment and version control [cite: 37, 40]
+      progressPercentage: "65%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -174,29 +172,38 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Research Assistant",
+      company: "DFKI",
+      companylogo: require("./assets/images/dfki.jpg"),
+      date: "September 2021 - Present",
+      desc: "As a Research Assistant at DFKI, my work focuses on developing innovative computer vision solutions for microscopic image analysis, specifically advancing cell segmentation and tracking. My research centers on pioneering weakly supervised and synthetic data generation methods to significantly reduce the laborious and costly manual annotation efforts traditionally required in cell biology, thereby enabling more efficient and scalable biomedical research.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Designed and implemented cutting-edge weakly supervised approaches (such as Point2Mask, SAT, BoxTrack) that enable high-precision cell segmentation and tracking using minimal annotations like points or bounding boxes.",
+        "Developed comprehensive frameworks (such as CellGenie, DeepMuCS) for synthetic data generation and cell-type aware segmentation, pushing the boundaries of analysis in complex microscopic and co-culture imaging."
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Data Scientist",
+      company: "Sensifai",
+      companylogo: require("./assets/images/Sensifai_logo.png"),
+      date: "November 2019 - October 2020",
+      desc: "As a Data Scientist, I specialized in real-time video analysis from surveillance feeds. My primary responsibility was to develop and deliver deep learning solutions for key safety-critical applications, including fire, violence, and face detection.",
+      descBullets: [
+        "Owned the end-to-end development lifecycle for multiple detection projects, from initial data collection and processing to final model training and deployment.",
+        "Implemented and trained a suite of advanced deep learning models (including YOLO series, RetinaNet, CenterNet, and optical flow-based networks) for object detection, face recognition, and violence detection tasks."
+      ]
     },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+{
+      role: "AI Researcher",
+      company: "IPM",
+      companylogo: require("./assets/images/IPM.png"),
+      date: "April 2019 - September 2020",
+      desc: "During my tenure as an AI Researcher at the Institute for Research in Fundamental Sciences (IPM), I contributed to diverse projects applying deep learning to solve distinct challenges in medical and satellite imaging. This foundational research role culminated in my Bachelor's thesis, which was also completed at the institute.",
+      descBullets: [
+        "Applied various deep learning models to the challenge of early lung cancer detection from medical scans.",
+        "Developed and implemented Super Resolution techniques to enhance the quality and detail of satellite imagery.",
+        "Conducted the research for my Bachelor's thesis, which focused on representing life-log data through creative AI-driven mediums."
+      ]
     }
   ]
 };
@@ -206,37 +213,24 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "SIGNIFICANT PROJECTS AND EDUCATIONAL INITIATIVES I'VE CONTRIBUTED TO",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
+      image: require("./assets/images/DLSS2019.jpg"),
+      projectName: "Deep Learning Summer School 2019 (DLSS 2019)",
+      projectDesc: "Founded and managed an intensive summer school program focused on advanced deep learning techniques and their applications in computer vision and AI research. Successfully organized the event with over 250 participants from diverse backgrounds. Served as both organizer and speaker, delivering lectures on cutting-edge AI methodologies and facilitating knowledge transfer in the deep learning community."
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
+      image: require("./assets/images/weacademy.jpg"),
+      projectName: "Weacademy",
+      projectDesc: "Co-founded an educational platform and learning initiative focused on advancing knowledge and skills in technology and artificial intelligence. Led the development of comprehensive learning programs and curriculum design, creating structured pathways for students and professionals to enhance their technical expertise. Established partnerships with industry experts and academic institutions to provide high-quality educational content and mentorship opportunities."
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -300,6 +294,76 @@ const achievementSection = {
       ]
     }
   ],
+  display: false // Set false to hide this section, defaults to true
+};
+
+// Publications Section
+
+const publicationsSection = {
+  title: emoji("Publications 📚"),
+  papers: [
+    {
+      title: "Box it, Track it: A Weakly Supervised Framework for Cell Tracking",
+      venue: "DAGM German Conference on Pattern Recognition (DAGM GCPR 2025)",
+      year: "2025",
+      date: "2025-03-15", // Format: YYYY-MM-DD for sorting
+      description: "BoxTrack offers a lightweight and annotation-efficient alternative for cell tracking, requiring only a single bounding box per cell in the first frame. Without relying on point-level annotations, it performs end-to-end instance segmentation and tracking, substantially reducing annotation cost while improving performance over existing methods like SAT by +15.96 MOTA points on CTMC dataset.",
+      tags: ["Computer Vision", "Deep Learning","Microscopy", "Biomedical", "Cell Tracking", "Segment Anything Model 2", "Weak Supervision", "Temporal Downsampling"],
+      links: [
+        { name: "PDF", url: "#", icon: "fas fa-file-pdf" },
+        { name: "Code", url: "#", icon: "fab fa-github" }
+      ]
+    },
+    {
+      title: "SAT: Segment and Track Anything for Microscopy",
+      venue: "International Conference on Agents and Artificial Intelligence (ICAART 2025)",
+      year: "2025",
+      date: "2025-03-15", // Format: YYYY-MM-DD for sorting
+      description: "SAT presents a novel pipeline that leverages point annotations in the first frame to automate cell segmentation and tracking across all subsequent frames. By significantly reducing annotation time and effort, it enables efficient and scalable analysis for large-scale studies, achieving over 80% Multiple Object Tracking Accuracy (MOTA) across diverse datasets and imaging modalities.",
+      tags: ["Computer Vision", "Deep Learning", "Microscopy", "Biomedical" , "Cell Tracking", "Segment Anything Model","Weak Supervision"],
+      links: [
+        { name: "PDF", url: "#", icon: "fas fa-file-pdf" },
+        { name: "Code", url: "#", icon: "fab fa-github" }
+      ]
+    },
+    {
+      title: "CellGenie: An End-to-End Pipeline for Synthetic Cellular Data Generation and Segmentation",
+      venue: "Annual Conference on Medical Image Understanding and Analysis (MIUA 2024)",
+      year: "2024",
+      date: "2024-03-15", // Format: YYYY-MM-DD for sorting
+      description: "CellGenie addresses data scarcity in deep learning-based cell segmentation through an innovative approach for automatic synthetic data generation. Leveraging the LIVECell dataset, it generates synthetic microscopic images with corresponding segmentation masks, seamlessly integrating this data into training to enhance model performance beyond existing annotated datasets and improve robustness and generalization.",
+      tags: ["Computer Vision", "Deep Learning","Microscopy", "Biomedical", "Cell Segmentation"],
+      links: [
+        { name: "PDF", url: "#", icon: "fas fa-file-pdf" },
+        { name: "Code", url: "#", icon: "fab fa-github" }
+      ]
+    },
+    {
+      title: "DeepMuCS: A Framework for Co-culture Microscopic Image Analysis, From Generation to Segmentation",
+      venue: "IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI 2022)",
+      year: "2022",
+      date: "2022-09-27", // Format: YYYY-MM-DD for sorting
+      description: "DeepMuCS presents a framework for co-culture microscopic image data generation and culture-dependent cell segmentation. Addressing the critical need for cell-type discrimination in co-culture environments for drug development, it generates microscopic images containing multiple cell cultures and provides a pipeline for cell-type aware segmentation in co-culture microscopic images, achieving good precision for understanding cellular mechanisms in disease states.",
+      tags: ["Computer Vision", "Deep Learning","Microscopy", "Biomedical", "Cell Segmentation", "Co-culture Imaging", "Healthcare"],
+      links: [
+        { name: "PDF", url: "#", icon: "fas fa-file-pdf" },
+        { name: "Code", url: "#", icon: "fab fa-github" }
+      ]
+    },
+    {
+      title: "Point2Mask: a weakly supervised approach for cell segmentation using point annotation",
+      venue: "Annual Conference on Medical Image Understanding and Analysis (MIUA 2022)",
+      year: "2022",
+      date: "2022-07-25", // Format: YYYY-MM-DD for sorting
+      description: "Point2Mask presents a weakly supervised approach for cell instance segmentation using only point and bounding box annotations, enormously reducing annotation efforts. Evaluated on the LIVECell dataset, it achieved 43.53% mean average precision - comparable to fully supervised methods trained with complete segmentation masks - while being 3.71 times faster to annotate compared to full mask annotation.",
+      tags: ["Computer Vision", "Deep Learning","Microscopy", "Biomedical", "Cell Segmentation", "Weak Supervision", "Point Annotation"],
+      links: [
+        { name: "PDF", url: "#", icon: "fas fa-file-pdf" },
+        { name: "Code", url: "#", icon: "fab fa-github" }
+      ]
+    }
+  ],
+  sortByDate: true, // Sort papers from latest to oldest
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -324,7 +388,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +407,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,7 +420,7 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
@@ -372,15 +436,14 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  email_address: "Mahdi.koochali@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
@@ -397,6 +460,7 @@ export {
   openSource,
   bigProjects,
   achievementSection,
+  publicationsSection,
   blogSection,
   talkSection,
   podcastSection,
